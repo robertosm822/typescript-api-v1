@@ -16,4 +16,11 @@ export class UserController {
 
         return response.status(201).json({message: "Criado com sucesso", data: user});
     }
+
+    getAllUsers = (request: Request, response: Response): any => {
+        const userService = new UserService();
+        const users = userService.getAllUsers();
+
+        return response.status(200).json(users);
+    }
 }

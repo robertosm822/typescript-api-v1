@@ -14,4 +14,8 @@ export class UserService {
         mockDb.push(user);
         console.log(mockDb);
     }
+
+    getAllUsers = () => {
+        return mockDb;
+    }
 }
