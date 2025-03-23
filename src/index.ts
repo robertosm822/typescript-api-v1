@@ -1,12 +1,7 @@
 import express, { Request, Response } from 'express';
 import { UserController } from './controllers/UserController';
 
-const mockDb = [
-    {
-        name: "Joana",
-        email: "joana.dark@dio.com"
-    }
-];
+
 
 const userController = new UserController();
 
