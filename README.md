@@ -23,4 +23,5 @@
 ```bash
     npm i express
     npm i -D @types/express
+    npm i -D jest ts-jest @types/jest
 ```
