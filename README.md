@@ -25,3 +25,9 @@
     npm i -D @types/express
     npm i -D jest ts-jest @types/jest
 ```
+
+- Após instalar o Jest devemos inicializar o mesmo com o comando:
+
+```bash
+    npx jest --init
+```
