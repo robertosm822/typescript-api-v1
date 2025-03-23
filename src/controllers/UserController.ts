@@ -7,6 +7,11 @@ export class UserController {
         const userService = new UserService();
 
         const user = request.body;
+
+        if(!user.name  && user.name !== ""){
+            return response.status(400).json({message: "Bad request! Name is required."});
+        }
+
         userService.createUser(user.name, user.email);
 
         return response.status(201).json({message: "Criado com sucesso", data: user});
