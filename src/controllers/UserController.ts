@@ -1,17 +1,14 @@
 import { Request, Response } from "express";
+import { UserService } from "../services/UserService";
 
-const mockDb = [
-    {
-        name: "Joana",
-        email: "joana.dark@dio.com"
-    }
-];
 
 export class UserController {
     createUser = (request: Request, response: Response): any => {
+        const userService = new UserService();
+
         const user = request.body;
-        mockDb.push(user);
-        console.log(mockDb);
+        userService.createUser(user.name, user.email);
+
         return response.status(201).json({message: "Criado com sucesso", data: user});
     }
 }
